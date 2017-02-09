@@ -1,0 +1,6 @@
+<%= form_tag list_of_stocks_path, method: :get do %>
+  <p>
+    <%= text_field_tag :prefix, params[:prefix] %>
+    <%= submit_tag "Search" %>
+  </p>
+<% end %>

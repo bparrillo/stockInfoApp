@@ -1,24 +1,26 @@
 # README
 
-This README would normally document whatever steps are necessary to get the
-application up and running.
-
-Things you may want to cover:
-
 * Ruby version
+ruby 2.3.1p112 
 
-* System dependencies
+* System dependencies- 
+uses postgres
 
-* Configuration
+* Database creation-
+ bundle exec rake db:{create,migrate,seed}
 
-* Database creation
+run bundle install
+run bundle exec rake import_stocks['path/to/file.csv'] 
+to import a csv of stock info, which should have as columns:
+Name 
+Last Sale
+Market Cap
+IPO Year
+Sector
+Industry
+Summary Quote
 
-* Database initialization
+go to localhost:3000/search for search
+type in a prefix to get the first 20 stocks that match that prefix
+click on a prefix to display a historical quote chart
 
-* How to run the test suite
-
-* Services (job queues, cache servers, search engines, etc.)
-
-* Deployment instructions
-
-* ...

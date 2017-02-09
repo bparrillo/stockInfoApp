@@ -1,0 +1,22 @@
+<table>
+  <thead>
+    <tr>
+      <th colspan="3"></th>
+    </tr>
+  </thead>
+
+  <tbody>
+    <% @stocks.each do |stock| %>
+      <tr>
+        <td><%= link_to "#{stock.symbol}", chart_path(symbol: stock.symbol) %></td>
+        <td><%= stock.name %></td>
+        <td><%= stock.last_sale %></td>
+        <td><%= stock.market_cap %></td>
+        <td><%= stock.ipo_year %></td>
+        <td><%= stock.sector %></td>
+        <td><%= stock.industry %></td>
+        <td><%= stock.summary_quote %></td>
+      </tr>
+    <% end %>
+  </tbody>
+</table>
